@@ -1,0 +1,291 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+        'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+        'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 18px;
+}
+:root {
+    --border-color: #6d5744;
+    --background-color: #fafafa;
+    --dark-border-color: #ffe9d6;
+    --dark-background-color: #302d29;
+}
+#root {
+    background-color: var(--background-color);
+    color: var(--border-color);
+    display: flex;
+    flex-direction: row;
+    transition:
+        background-color 0.2s,
+        color 0.2s;
+}
+
+a, a:visited {
+    color:inherit;
+}
+
+.dark {
+    background-color: var(--dark-background-color) !important;
+    color: var(--dark-border-color) !important;
+    border-color: var(--dark-border-color) !important;
+}
+
+.dark-button {
+    color:var(--dark-border-color) !important;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    width: 84vw;
+    flex-wrap: wrap;
+}
+
+.container-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+}
+
+.container ul {
+    list-style: none;
+}
+
+#main-header {
+    height: 100vh;
+}
+
+#main-header,
+#main-footer {
+    width: 8vw;
+    text-align: center;
+}
+
+#main-header,
+#main-footer,
+.container-column {
+    border-right: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.button-link a, .button-link button {
+    cursor:pointer;
+    width: fit-content;
+    color: var(--border-color);
+    border: 2px solid var(--border-color);
+    display: block;
+    text-decoration: none;
+    padding: 16px;
+    transition:
+        color 0.2s,
+        border 0.2s,
+        background-color 0.2s;
+}
+
+.button-link a:hover, .button-link button:hover {
+    color: var(--background-color);
+    background-color: var(--border-color);
+}
+
+#main-header nav {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+    position: fixed;
+    width: 8vw;
+}
+
+#main-header nav li {
+    list-style: none;
+    font-size: 16px;
+    margin-left: -40px;
+}
+
+#main-header nav .button-link a {
+    width: 100%;
+}
+
+.sprite {
+    width: 48px;
+    height: 48px;
+}
+
+.artwork {
+    width: 75%;
+    position: relative;
+    text-align: center;
+}
+
+.artwork nav {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.artwork nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.artwork img {
+    max-height: 100vh;
+}
+
+span.type {
+    margin: 2px;
+    font-size: 12px;
+    padding: 3px;
+    color: white;
+    border-radius: 5px;
+    text-shadow: 1px 1px black;
+}
+
+.Normal-Card {
+    background-color: #a8a77a80;
+}
+
+.Normal {
+    background-color: #a8a77a;
+}
+
+.Feu-Card {
+    background-color: #ee813080;
+}
+
+.Feu {
+    background-color: #ee8130;
+}
+
+.Eau-Card {
+    background-color: #6390f080;
+}
+
+.Eau {
+    background-color: #6390f0;
+}
+
+.Électrik-Card {
+    background-color: #f7d02c80;
+}
+
+.Électrik {
+    background-color: #f7d02c;
+}
+
+.Plante-Card {
+    background-color: #7ac74c80;
+}
+
+.Plante {
+    background-color: #7ac74c;
+}
+
+.Glace-Card {
+    background-color: #96d9d680;
+}
+
+.Glace {
+    background-color: #96d9d6;
+}
+
+.Combat-Card {
+    background-color: #c22e2880;
+}
+
+.Combat {
+    background-color: #c22e28;
+}
+
+.Poison-Card {
+    background-color: #a33ea180;
+}
+
+.Poison {
+    background-color: #a33ea1;
+}
+
+.Sol-Card {
+    background-color: #e2bf6580;
+}
+
+.Sol {
+    background-color: #e2bf65;
+}
+
+.Vol-Card {
+    background-color: #a98ff380;
+}
+
+.Vol {
+    background-color: #a98ff3;
+}
+
+.Psy-Card {
+    background-color: #f9558780;
+}
+
+.Psy {
+    background-color: #f95587;
+}
+
+.Insecte-Card {
+    background-color: #a6b91a80;
+}
+
+.Insecte {
+    background-color: #a6b91a;
+}
+
+.Roche-Card {
+    background-color: #b6a13680;
+}
+
+.Roche {
+    background-color: #b6a136;
+}
+
+.Spectre-Card {
+    background-color: #73579780;
+}
+
+.Spectre {
+    background-color: #735797;
+}
+
+.Dragon-Card {
+    background-color: #6f35fc80;
+}
+
+.Dragon {
+    background-color: #6f35fc;
+}
+
+.Acier-Card {
+    background-color: #b7b7ce80;
+}
+
+.Acier {
+    background-color: #b7b7ce;
+}
+
+.Fée-Card {
+    background-color: #d685ad80;
+}
+
+.Fée {
+    background-color: #d685ad;
+}
