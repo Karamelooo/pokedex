@@ -4,13 +4,11 @@ const PokemonType = (pokemon) => {
             Type :{' '}
             {pokemon.pokemon.type.map((type) => (
                 <>
-                    <span className={`type ${type}`}>
-                        {type}
-                    </span>
+                    <span className={`type ${type}`}>{type}</span>
                 </>
             ))}
         </>
-    )
-}
+    );
+};
 
 export default PokemonType;

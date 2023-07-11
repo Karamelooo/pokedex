@@ -23,7 +23,7 @@ const PokemonList = () => {
                             </Link>
                         </li>
                         <li>
-                            <PokemonType pokemon={pokemon}/>
+                            <PokemonType pokemon={pokemon} />
                         </li>
                     </ul>
                 </Column>

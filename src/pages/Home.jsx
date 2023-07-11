@@ -19,9 +19,8 @@ const Home = () => {
                 </Link>
             </Column>
             <Column>
-                <Weather/>
+                <Weather />
             </Column>
-            
         </>
     );
 };

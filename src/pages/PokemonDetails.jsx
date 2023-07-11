@@ -16,7 +16,7 @@ const PokemonDetails = () => {
                             <strong>{pokemon.name.french}</strong>
                         </li>
                         <li>
-                            <PokemonType pokemon={pokemon}/>
+                            <PokemonType pokemon={pokemon} />
                         </li>
                         <li>Points de vie : {pokemon.base.HP}</li>
                         <li>Attaque : {pokemon.base.Attack}</li>

@@ -3,35 +3,33 @@ import React, { useState } from 'react';
 
 function SearchForm() {
     const [search, setSearch] = useState('');
-    const Search = ({search}) => {
-        if(document.getElementById('search-city')) {
+    const Search = ({ search }) => {
+        if (document.getElementById('search-city')) {
             setSearch(document.getElementById('search-city').value);
         }
-        if(search) {
-            return (
-            <>
-            <WeatherDisplay search={search}/>;
-        </>
-            )
-        }
-        else {
+        if (search) {
             return (
                 <>
-                    <WeatherDisplay search="Paris"/>;
+                    <WeatherDisplay search={search} />;
+                </>
+            );
+        } else {
+            return (
+                <>
+                    <WeatherDisplay search="Paris" />;
                 </>
             );
         }
     };
     return (
         <>
-                    <div>
-                        <label htmlFor="search-city">Ville : </label>
-                        <input id="search-city" type="text" onChange={Search}/>
-                    </div>
-            <Search search={search}/>;
+            <div>
+                <label htmlFor="search-city">Ville : </label>
+                <input id="search-city" type="text" onChange={Search} />
+            </div>
+            <Search search={search} />;
         </>
-    )
+    );
 }
-
 
 export default SearchForm;

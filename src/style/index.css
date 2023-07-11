@@ -27,8 +27,9 @@ body {
         color 0.2s;
 }
 
-a, a:visited {
-    color:inherit;
+a,
+a:visited {
+    color: inherit;
 }
 
 .dark {
@@ -38,7 +39,7 @@ a, a:visited {
 }
 
 .dark-button {
-    color:var(--dark-border-color) !important;
+    color: var(--dark-border-color) !important;
 }
 
 code {
@@ -81,8 +82,9 @@ code {
     border-bottom: 2px solid var(--border-color);
 }
 
-.button-link a, .button-link button {
-    cursor:pointer;
+.button-link a,
+.button-link button {
+    cursor: pointer;
     width: fit-content;
     color: var(--border-color);
     border: 2px solid var(--border-color);
@@ -95,7 +97,8 @@ code {
         background-color 0.2s;
 }
 
-.button-link a:hover, .button-link button:hover {
+.button-link a:hover,
+.button-link button:hover {
     color: var(--background-color);
     background-color: var(--border-color);
 }
