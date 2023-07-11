@@ -3,6 +3,14 @@ import React, { useState } from 'react';
 
 function SearchForm() {
     const [search, setSearch] = useState('');
+    const [measure, setMeasure] = useState('metric');
+    const MeasureToggle = () => {
+        if (measure == 'metric') {
+            setMeasure('imperial');
+        } else {
+            setMeasure('metric');
+        }
+    };
     const Search = ({ search }) => {
         if (document.getElementById('search-city')) {
             setSearch(document.getElementById('search-city').value);
@@ -10,13 +18,13 @@ function SearchForm() {
         if (search) {
             return (
                 <>
-                    <WeatherDisplay search={search} />;
+                    <WeatherDisplay search={search} measure={measure} />
                 </>
             );
         } else {
             return (
                 <>
-                    <WeatherDisplay search="Paris" />;
+                    <WeatherDisplay search="Paris" measure={measure} />
                 </>
             );
         }
@@ -27,7 +35,10 @@ function SearchForm() {
                 <label htmlFor="search-city">Ville : </label>
                 <input id="search-city" type="text" onChange={Search} />
             </div>
-            <Search search={search} />;
+            <button id="toggle" onClick={MeasureToggle}>
+                Changer la mesure
+            </button>
+            <Search search={search} />
         </>
     );
 }

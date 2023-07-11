@@ -22,11 +22,11 @@ function Call(target) {
     }, []);
 
     if (loading) {
-        return <div>Loading...</div>;
+        return <div>Chargement...</div>;
     }
 
     if (error) {
-        return <div>Error: {error.message}</div>;
+        return <div>La ville n&apos;a pas été trouvée</div>;
     }
 
     return data;
