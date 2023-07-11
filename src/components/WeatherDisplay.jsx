@@ -2,9 +2,11 @@ import Call from '../functions/Call';
 
 const WeatherDisplay = ({ search, measure }) => {
     if (measure == 'imperial') {
-        var symbol = '°F';
+        var symbolTemp = '°F';
+        var symbolSpeed = 'mph';
     } else {
-        symbol = '°C';
+        symbolTemp = '°C';
+        symbolSpeed = 'km/h';
     }
     const API_key = 'c9bfdbc4d3561d06143cfa790cced76a';
     const target = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${API_key}&units=${measure}`;
@@ -25,21 +27,24 @@ const WeatherDisplay = ({ search, measure }) => {
                     </li>
                     <li>
                         Température : {data.main.temp}
-                        {symbol}
+                        {symbolTemp}
                     </li>
                     <li>
                         Ressenti : {data.main.feels_like}
-                        {symbol}
+                        {symbolTemp}
                     </li>
                     <li>
                         Temp. min. : {data.main.temp_min}
-                        {symbol}
+                        {symbolTemp}
                     </li>
                     <li>
                         Temp. max. : {data.main.temp_max}
-                        {symbol}
+                        {symbolTemp}
                     </li>
                     <li>Humidité : {data.main.temp}%</li>
+                    <li>
+                        Vitesse du vent : {data.wind.speed} {symbolSpeed}
+                    </li>
                 </ul>
             </>
         );
