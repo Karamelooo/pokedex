@@ -1,13 +1,14 @@
 import Data from '../data/pokedex.json';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import Column from './Column';
+import Column from '../components/Column';
+import SearchForm from '../components/WeatherDisplay';
+import WeatherDisplay from '../components/WeatherDisplay';
+import Weather from './Weather';
+import Call from '../functions/Call';
 
 const Home = () => {
-    const [random, setRandom] = useState(Math.floor(Math.random() * 151));
-    const reroll = () => {
-        setRandom(Math.floor(Math.random() * 151));
-    };
+    const [random] = useState(Math.floor(Math.random() * 151));
     return (
         <>
             <Column>
@@ -17,6 +18,10 @@ const Home = () => {
                     Découvrir un Pokémon aléatoire
                 </Link>
             </Column>
+            <Column>
+                <Weather/>
+            </Column>
+            
         </>
     );
 };

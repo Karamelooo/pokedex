@@ -1,6 +1,7 @@
 import Data from '../data/pokedex.json';
 import { Link, useParams } from 'react-router-dom';
-import Column from './Column';
+import Column from '../components/Column';
+import PokemonType from '../components/PokemonType';
 
 const PokemonDetails = () => {
     const { id } = useParams();
@@ -15,14 +16,7 @@ const PokemonDetails = () => {
                             <strong>{pokemon.name.french}</strong>
                         </li>
                         <li>
-                            Type :{' '}
-                            {pokemon.type.map((type) => (
-                                <>
-                                    <span className={`type ${type}`}>
-                                        {type}
-                                    </span>
-                                </>
-                            ))}
+                            <PokemonType pokemon={pokemon}/>
                         </li>
                         <li>Points de vie : {pokemon.base.HP}</li>
                         <li>Attaque : {pokemon.base.Attack}</li>

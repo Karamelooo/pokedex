@@ -1,6 +1,7 @@
 import Data from '../data/pokedex.json';
 import { Link } from 'react-router-dom';
-import Column from './Column';
+import Column from '../components/Column';
+import PokemonType from '../components/PokemonType';
 
 const PokemonList = () => {
     return (
@@ -22,14 +23,7 @@ const PokemonList = () => {
                             </Link>
                         </li>
                         <li>
-                            Type :{' '}
-                            {pokemon.type.map((type) => (
-                                <>
-                                    <span className={`type ${type}`}>
-                                        {type}
-                                    </span>
-                                </>
-                            ))}
+                            <PokemonType pokemon={pokemon}/>
                         </li>
                     </ul>
                 </Column>

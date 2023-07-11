@@ -3,7 +3,7 @@ const Column = ({ title, children, type }) => {
         <>
             <div className={`container-column ${type}-Card`}>
                 <h2>{title}</h2>
-                <p>{children}</p>
+                <div>{children}</div>
             </div>
         </>
     );

@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from '../components/Home';
-import PokemonList from '../components/PokemonList';
-import PokemonDetails from '../components/PokemonDetails';
+import Home from '../pages/Home';
+import PokemonList from '../pages/PokemonList';
+import PokemonDetails from '../pages/PokemonDetails';
 import Navigation from '../layout/Navigation';
 import NoMatch from '../components/NoMatch';
 
