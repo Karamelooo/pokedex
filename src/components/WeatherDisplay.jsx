@@ -12,7 +12,6 @@ const WeatherDisplay = ({ search, measure }) => {
     const target = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${API_key}&units=${measure}`;
 
     const data = Call(target);
-    console.log(data);
 
     if (data.main) {
         return (
