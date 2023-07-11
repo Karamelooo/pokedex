@@ -9,12 +9,13 @@ const PokemonDetails = () => {
     if (pokemon) {
         return (
             <>
-                <Column key={pokemon.id} type={pokemon.type[0]}>
+                <Column
+                    title={pokemon.name.french}
+                    key={pokemon.id}
+                    type={pokemon.type[0]}
+                >
                     <ul>
                         <li>Pokémon n°{pokemon.id}</li>
-                        <li>
-                            <strong>{pokemon.name.french}</strong>
-                        </li>
                         <li>
                             <PokemonType pokemon={pokemon} />
                         </li>
@@ -77,12 +78,9 @@ const PokemonDetails = () => {
     } else {
         return (
             <>
-                <Column>
+                <Column title="MissingNo">
                     <ul>
                         <li>Pokémon n°404</li>
-                        <li>
-                            <strong>MissingNo</strong>
-                        </li>
                         <li>Points de vie : 33</li>
                         <li>Type : Bird</li>
                         <li>Attaque : 136</li>
